@@ -1,7 +1,5 @@
 'use strict';
 
-const assert = require('assert');
-
 function List() {
   this.listSize = 0;
   this.pos = 0;
@@ -37,21 +35,5 @@ List.prototype.toString = function() {
   return this.data;
 }
 
-let names = new List();
-names.append('elliot');
+module.exports = List;
 
-assert.equal(names.toString()[0], 'elliot');
-assert.deepEqual(names.toString(), ['elliot']);
-
-names.append('chi');
-
-assert.deepEqual(names.toString(), ['elliot', 'chi']);
-
-assert.equal(names.remove('chi'), true);
-
-
-assert.deepEqual(names.toString(), ['elliot']);
-
-assert.equal(names.find('elliot'), 0);
-
-console.log(names.toString());
