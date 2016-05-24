@@ -21,4 +21,5 @@ assert.deepEqual(names.toString(), ['elliot']);
 
 assert.equal(names.find('elliot'), 0);
 
-console.log(names.toString());
+// console.log(names.toString());
+console.log('all list tests passed');
