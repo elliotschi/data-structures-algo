@@ -1,27 +1,26 @@
 class Stack {
   constructor() {
-    this.data = {};
-    this.curr = 0;
-    this.tail = 0;
+    this.storage = {};
+    this.size = 0;
   }
   
-  showData() {
-    return this.data;
-  }
-  
-  push(element) {
-    this.data[this.curr++] = element;
+  push(element) { 
+    this.storage[this.size++] = element;
   }
   
   pop(element) {
-    let topElement = this.data[--this.curr];
-    delete this.data[--this.curr];
+    if (this.length() === 0) {
+      return null;
+    }
+    
+    let topElement = this.storage[--this.size];
+    delete this.storage[this.size];
     
     return topElement;
   }
   
   length() {
-    return this.curr;
+    return this.size;
   }
 }
 

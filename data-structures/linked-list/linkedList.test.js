@@ -5,7 +5,7 @@ const {
   expect
 } = require('chai');
 
-describe('linkedList', () => {
+describe('LinkedList', () => {
   let linkedList;
   
   beforeEach(() => {
